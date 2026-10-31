@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --color-primary: #55bc04;
+  --color-bg: #c2c2c2;
+  --color-card-bg: #ffffff;
+  --color-input-border: #c2c2c2;
+  --color-placeholder: #c2c2c2;
+  --color-text-secondary: #6f6f6f;
+  --color-white: #ffffff;
+
+  --radius: 5px;
+  --container-width: 960px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+}
+
+.container {
+  width: min(var(--container-width), 100% - 40px);
+  margin-inline: auto;
+}
+
+/* Main — 20px entre header, filtro e listagem */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.card {
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+/* Filtro */
+.filter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.filter-form input,
+.filter-form button {
+  width: 200px;
+  height: 40px;
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.filter-form input {
+  border: 1px solid var(--color-input-border);
+  padding: 0 9px; /* 1px borda + 9px = texto a 10px da borda externa */
+  outline-color: var(--color-primary);
+}
+
+.filter-form input::placeholder {
+  color: var(--color-placeholder);
+}
+
+.filter-form button {
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Listagem */
+.listing {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product {
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius);
+  padding: 9px; /* 1px borda + 9px = 10px; altura total 53px */
+}
+
+.product-name {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  color: var(--color-text-secondary);
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  color: var(--color-primary);
+}

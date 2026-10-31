@@ -1,0 +1,25 @@
+/* Header — 70px, verde */
+header {
+  height: 70px;
+  background-color: var(--color-primary);
+}
+
+header .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-white);
+}
+
+header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23px;
+}
+
+header .product-count {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+}
