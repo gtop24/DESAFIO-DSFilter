@@ -1,0 +1,19 @@
+.product {
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius);
+  padding: 9px; /* 1px borda + 9px = 10px; altura total 53px */
+}
+
+.product-name {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  color: var(--color-text-secondary);
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  color: var(--color-primary);
+}

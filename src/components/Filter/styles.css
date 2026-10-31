@@ -1,0 +1,32 @@
+.filter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.filter-form input,
+.filter-form button {
+  width: 200px;
+  height: 40px;
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.filter-form input {
+  border: 1px solid var(--color-input-border);
+  padding: 0 9px;
+  outline-color: var(--color-primary);
+}
+
+.filter-form input::placeholder {
+  color: var(--color-placeholder);
+}
+
+.filter-form button {
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 700;
+  cursor: pointer;
+}
