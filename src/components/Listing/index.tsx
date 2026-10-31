@@ -1,22 +1,19 @@
-import { useState } from "react";
 import "./styles.css";
 import type { ProductDTO } from "../../models/product";
-import * as productService from '../../services/product-service';
 import ProductCard from "../ProductCard";
 
-export default function Listing() {
+type Props = {
+  products: ProductDTO[];
+};
 
-  const [products, setProducts] = useState<ProductDTO[]>(
-    productService.findByPrice(0, Number.MAX_VALUE)
-  );
-
+export default function Listing({ products }: Props) {
   return (
     <section className="card listing">
-     {
-      products.map(
-        product => <ProductCard key={product.id} product={product} />
-      )
-     }
+      {
+        products.map(
+          product => <ProductCard key={product.id} product={product} />
+        )
+      }
     </section>
   );
 }
